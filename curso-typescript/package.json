@@ -24,6 +24,8 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "@types/node": "^20.11.30",
+    "@types/validator": "^13.11.9",
     "acorn": "^8.11.3",
     "acorn-jsx": "^5.3.2",
     "acorn-walk": "^8.3.2",
@@ -134,6 +136,7 @@
     "undici-types": "^5.26.5",
     "uri-js": "^4.4.1",
     "v8-compile-cache-lib": "^3.0.1",
+    "validator": "^13.11.0",
     "which": "^2.0.2",
     "wrappy": "^1.0.2",
     "yallist": "^4.0.0",
