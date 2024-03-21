@@ -16,7 +16,7 @@ form.addEventListener('submit', function (event: Event) {
   checkForEmptyFields(username, email, password, password2);
   checkEmail(email);
   checkEqualPasswords(password, password2);
-  if (shouldSendForm(this)) console.log('FORMULÁRIO ENVIADO');
+  if (shouldSendForm(this)) alert('FORMULÁRIO ENVIADO');
 });
 
 function checkForEmptyFields(...inputs: HTMLInputElement[]): void {
@@ -39,12 +39,14 @@ function checkEqualPasswords(
   }
 }
 
+// retira mensagem de erro
 function hideErrorMessages(form: HTMLFormElement): void {
   form
     .querySelectorAll('.' + SHOW_ERROR_MESSAGES)
     .forEach((item) => item.classList.remove(SHOW_ERROR_MESSAGES));
 }
 
+// adiciona mensagem de erro
 function showErrorMessage(input: HTMLInputElement, msg: string): void {
   const formFields = input.parentElement as HTMLDivElement;
   const errorMessage = formFields.querySelector(
@@ -54,6 +56,7 @@ function showErrorMessage(input: HTMLInputElement, msg: string): void {
   formFields.classList.add(SHOW_ERROR_MESSAGES);
 }
 
+//
 function shouldSendForm(form: HTMLFormElement): boolean {
   let send = true;
   form
