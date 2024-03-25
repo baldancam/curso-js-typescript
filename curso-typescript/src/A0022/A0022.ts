@@ -1,7 +1,7 @@
 // cria uma classe que pode ser usada de fora
 export class Empresa {
   // é uma classe publica e apenas de leitura, ou seja, não pode ser alterada
-  public readonly nome: string;
+  public readonly nome: string; // public não necessário
   // por ser uma classe privada, preferivel já passar o atributo sem a necessidade de um metodo construtor
   private readonly colaboradores: Colaborador[] = [];
 
@@ -13,11 +13,11 @@ export class Empresa {
     this.cnpj = cnpj;
   }
   // metodo criado para adicionar valores ao array da classe
-  adicionaColaborador(colaborador: Colaborador): void {
+  public adicionaColaborador(colaborador: Colaborador): void {
     this.colaboradores.push(colaborador);
   }
 
-  mostrarColaboradores(): void {
+  public mostrarColaboradores(): void {
     for (const colaborador of this.colaboradores) {
       console.log(colaborador);
     }
@@ -44,3 +44,5 @@ empresa1.adicionaColaborador(colaborador3);
 
 console.log(empresa1);
 empresa1.mostrarColaboradores();
+
+console.log(empresa1.nome);
