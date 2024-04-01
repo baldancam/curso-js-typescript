@@ -28,7 +28,7 @@ const produto2 = new Produto('Regata', 41.9);
 const produto3 = new Produto('Bermuda', 75);
 
 const carrinhoDeCompras = new CarrinhoDeCompras();
-carrinhoDeCompras.inserirProdutos(produto1, produto2, produto3, produto1);
+carrinhoDeCompras.inserirProdutos(produto1, produto2, produto3);
 
 console.log(carrinhoDeCompras);
 console.log(carrinhoDeCompras.quantidadeProdutos());
