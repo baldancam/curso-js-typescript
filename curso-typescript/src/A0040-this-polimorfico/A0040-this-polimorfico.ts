@@ -39,7 +39,7 @@ console.log('##########');
 
 const potencia = new SubCalculadora(10);
 
-potencia.add(5).mul(2).div(2).sub(5).pow(2);
+potencia.add(5).mul(2).div(2).sub(8).pow(2);
 
 console.log(potencia);
 
